@@ -56,16 +56,17 @@
             display: inline-block;
             margin: 0.5em;
             text-decoration: none;
-            color: #B3B4BD; /* Light grey text */
+            color: #141619; /* Dark grey text */
             font-size: 1.2em;
             padding: 0.5em 1em;
-            border: 2px solid #B3B4BD;
+            border: 2px solid #141619;
             border-radius: 5px;
+            background-color: #ffffff; /* White background */
             transition: background-color 0.3s, color 0.3s;
         }
         .links a:hover, .resume-links a:hover {
-            background-color: #B3B4BD;
-            color: #141619; /* Dark grey text on hover */
+            background-color: #141619;
+            color: #ffffff; /* White text on hover */
         }
         .image-section {
             width: 150px;
@@ -120,6 +121,9 @@
             margin-bottom: 0.5em;
             color: #B3B4BD; /* Light grey text */
         }
+        .resume-links {
+            margin-top: 2em;
+        }
     </style>
 </head>
 <body>
@@ -128,27 +132,16 @@
             <div class="hero-text">
                 <h1>Brandon Salazar's<br>Portfolio Website</h1>
                 <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://letterboxd.com/bsalazar_/" target="_blank" class="letterboxd">
-                        <i class="fab fa-letterboxd"></i> Letterboxd
-                    </a>
-                </div>
             </div>
             <div class="image-section">
                 <img src="path_to_your_image.jpg" alt="Brandon Salazar">
             </div>
         </div>
-        <div class="resume-links">
-            <a href="#sensorium-avr">Sensorium AVR</a>
-            <a href="#green-key-resources">Green Key Resources</a>
-            <a href="#montclair-state">Montclair State University</a>
-            <a href="#best-buy">Best Buy</a>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>I'm Brandon Salazar, a business administration graduate with a concentration in Information Systems from Montclair State University. I have a passion for technology and data analytics, and I'm skilled in various tools and languages including Microsoft Office Suite, Salesforce.com, PowerBi, SQL, Tableau, and more.</p>
+            <p>In addition to my technical skills, I have a strong background in system administration and data analysis, having worked at Sensorium AVR, Green Key Resources, Montclair State University, and Best Buy's Geek Squad.</p>
+            <p>Outside of work, I'm actively involved in Brazilian Jiu Jitsu and student organizations such as L.A.S.O and the Data Driven Student Alliance. I'm also fluent in English and Spanish, and I'm certified in CPR and First Aid.</p>
         </div>
         <div class="resume-section" id="sensorium-avr">
             <h3>Sensorium AVR</h3>
@@ -163,4 +156,46 @@
             <h3>Green Key Resources</h3>
             <ul>
                 <li>System Administrator and Data Analyst</li>
-                <li
+                <li>Worked with Salesforce and SQL databases</li>
+                <li>Generated reports and dashboards using Tableau</li>
+                <li>Provided technical support and troubleshooting</li>
+            </ul>
+        </div>
+        <div class="resume-section" id="montclair-state">
+            <h3>Montclair State University</h3>
+            <ul>
+                <li>Lab Assistant Technician</li>
+                <li>Maintained computer labs and equipment</li>
+                <li>Assisted students and faculty with technical issues</li>
+                <li>Managed software installations and updates</li>
+            </ul>
+        </div>
+        <div class="resume-section" id="best-buy">
+            <h3>Best Buy - Geek Squad</h3>
+            <ul>
+                <li>Technician</li>
+                <li>Provided in-store and on-site technical support</li>
+                <li>Repaired and serviced computers and electronics</li>
+                <li>Advised customers on technology solutions</li>
+            </ul>
+        </div>
+        <div class="resume-links">
+            <a href="#sensorium-avr">Sensorium AVR</a>
+            <a href="#green-key-resources">Green Key Resources</a>
+            <a href="#montclair-state">Montclair State University</a>
+            <a href="#best-buy">Best Buy</a>
+        </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://letterboxd.com/bsalazar_/" target="_blank" class="letterboxd">
+                <i class="fab fa-letterboxd"></i> Letterboxd
+            </a>
+        </div>
+    </div>
+</body>
+</html>
