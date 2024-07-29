@@ -1,111 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="ETP Test Project - page 1">
-	<meta name="robots" content="noindex, nofollow">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>B.Sal's Portfolio Website</title>
-	<link href="style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">	
+    <meta charset="utf-8">
+    <meta name="description" content="Brandon Salazar's Portfolio Website">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brandon Salazar's Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1f3b4d; /* Darkish blue background */
+            color: #ffffff; /* White text */
+        }
+        .container {
+            text-align: center;
+        }
+        .hero-text h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3em;
+            margin: 0.5em 0;
+            color: #ffffff; /* White text */
+        }
+        p {
+            font-size: 1.2em;
+            margin: 0.5em 0 1.5em;
+            color: #d4d4d4; /* Light grey text */
+        }
+        .links a {
+            display: inline-block;
+            margin: 0.5em;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2em;
+            padding: 0.5em 1em;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background-color: #ffffff;
+            color: #1f3b4d; /* Darkish blue text on hover */
+        }
+    </style>
 </head>
 <body>
-<div class="hero-image-home">
-	<div class="logo">
-		<a href="/premier/index.html"><img src="premier-logo.png" alt="Premier Event Technology Logo"/></a>
-	</div>
-	<label for="toggle-1" class="toggle-menu"><ul><li></li> <li></li> <li></li></ul></label>
-	<input type="checkbox" id="toggle-1">
-  	<nav>
-		<ul>
-			<!-- Edit Menu Links  -->
-			<li><a href="/premier/about-us.html">About</a></li>
-			<li><a href="#">Our Work</a></li>
-			<li><a href="#">Our Team</a></li>
-			<li><a href="#">Careers</a></li>
-			<li><a href="#">Contact Us</a></li>
-			<!-- END Menu Links -->
-		</ul>
-	</nav>
-		
-	<!-- Edit Banner Text -->
-	<div class="hero-text">
-		<h1>Brandon Salazar's<br> Portfolio Website</h1>
-		<p class="hero-subtitle">Still Under Construction, to be used as basic static landing page for LinkedIn, Github, ETC.</p>
-	</div>
-	<!-- END Banner Text -->
-	</div>
-	<main>
-		<article class="main">
-			<section class="content">
-				<!-- Edit Homepage Text -->
-				<p class="blue-text">WE are <strong>Premier</strong></p>
-				<p id="text">We specialized in the full-service support of live events through a broad scope of offerings to our clients. Using a turn-key approach, we translate your vision into reality. From concept to execution, we do it all.</p>
-				<!-- END Homepage Text -->
-			</section>
-			<div id="imageGrid">
-			  <section class="grid">
-				<div class="grid-group">
-					<!-- Edit Homepage Image 1 -->
-				  	<div class="grid-group-image"><img src="ScenicDesign.png" alt="Scenic design" /></div>
-				  	<span class="blue">Scenic Design</span> <br>
-					NSM
-					<!-- END Homepage Image 1 -->
-				</div>
-				<div class="grid-group">
-					<!-- Edit Homepage Image 2 -->
-				  	<div class="grid-group-image"><img src="Lighting.png" alt="Lighting" /></div>
-				  	<span class="blue">Lighting</span> <br>
-					ACM
-					<!-- END Homepage Image 2 -->
-				</div>
-				<div class="grid-group">
-					<!-- Edit Homepage Image 3 -->
-				  	<div class="grid-group-image"><img src="LED.png" alt="LED" /></div>
-				  	<span class="blue">LED</span> <br>
-					Befefit
-					<!-- END Homepage Image 3 -->
-				</div>
-				<div class="grid-group">
-					<!-- Edit Homepage Image 4 -->
-				  	<div class="grid-group-image"><img src="Lighting2.png" alt="Lighting" /></div>
-				  	<span class="blue">Lighting</span> <br>
-					ACM
-					<!-- END Homepage Image 4 -->
-				</div>
-			  </section>
-			</div>
-		</article>
-	</main>
-	<footer class="footerRow">
-		<div class="footerColumn">
-			<span id="SocialMedia">
-				<a href="https://www.facebook.com/premiereventtechnology?fref=ts" target="_blank" class="fab fa-facebook-f"></a>
-				<a href="https://twitter.com/PremierEventAV" target="_blank" class="fab fa-twitter"></a>
-				<a href="https://www.linkedin.com/company/premier-creative-gorup/?trk=prof-following-company-logo" target="_blank" class="fab fa-linkedin-in"></a>
-			</span>
-		</div>
-		<div class="footerColumn">
-				<ol id="Copyright">
-					<!-- Edit Footer Links -->
-					<li class="footerMenu"><a href="#" class="blueLink">Terms of Use</a></li>
-					<li class="footerMenu"><a href="#" class="blueLink">Privacy Policy</a></li>
-					<!-- END Footer Links -->
-				</ol>
-		</div>
-	</footer>
-	<script>
-		function myFunction() {
-			  var x = document.getElementById("myTopnav");
-			  if (x.className === "menu") {
-				x.className += " responsive";
-			  } else {
-				x.className = "menu";
-			  }
-		} 
-	</script>
+    <div class="container">
+        <div class="hero-text">
+            <h1>Brandon Salazar's<br>Portfolio Website</h1>
+        </div>
+        <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
 </body>
 </html>
