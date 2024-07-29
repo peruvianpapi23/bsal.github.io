@@ -13,20 +13,31 @@
     <style>
         body {
             font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom left, #ffffff, #4169e1); /* Gradient from white to royal blue */
+            color: #ffffff; /* White text */
+            min-height: 200vh; /* Double the height of the viewport */
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #0077be; /* Ocean blue background */
-            color: #ffffff; /* White text */
+            align-items: flex-start;
+            padding: 2em;
         }
         .container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            text-align: left;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
         }
-        .text-section {
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            margin-bottom: 2em;
+        }
+        .hero-text {
             margin-right: 2em;
         }
         .hero-text h1 {
@@ -53,7 +64,7 @@
         }
         .links a:hover {
             background-color: #ffffff;
-            color: #0077be; /* Ocean blue text on hover */
+            color: #4169e1; /* Royal blue text on hover */
         }
         .image-section {
             width: 150px;
@@ -68,29 +79,52 @@
             height: 100%;
             object-fit: cover;
         }
+        .about {
+            width: 100%;
+            margin-top: 2em;
+            padding: 2em;
+            background-color: rgba(65, 105, 225, 0.8); /* Semi-transparent royal blue background */
+            border-radius: 10px;
+        }
+        .about h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            color: #ffffff; /* White text */
+        }
+        .about p {
+            font-size: 1.2em;
+            color: #d4d4d4; /* Light grey text */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="text-section">
+        <div class="hero">
             <div class="hero-text">
                 <h1>Brandon Salazar's<br>Portfolio Website</h1>
+                <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://letterboxd.com/bsalazar_/" target="_blank" class="letterboxd">
+                        <i class="fab fa-letterboxd"></i> Letterboxd
+                    </a>
+                </div>
             </div>
-            <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://letterboxd.com/bsalazar_/" target="_blank" class="letterboxd">
-                    <i class="fab fa-letterboxd"></i> Letterboxd
-                </a>
+            <div class="image-section">
+                <img src="path_to_your_image.jpg" alt="Brandon Salazar">
             </div>
         </div>
-        <div class="image-section">
-            <img src="path_to_your_image.jpg" alt="Brandon Salazar">
+        <div class="about">
+            <h2>About Me</h2>
+            <p>I'm Brandon Salazar, a business administration graduate with a concentration in Information Systems from Montclair State University. I have a passion for technology and data analytics, and I'm skilled in various tools and languages including Microsoft Office Suite, Salesforce.com, PowerBi, SQL, Tableau, and more.</p>
+            <p>In addition to my technical skills, I have a strong background in system administration and data analysis, having worked at Sensorium AVR, Green Key Resources, Montclair State University, and Best Buy's Geek Squad.</p>
+            <p>Outside of work, I'm actively involved in Brazilian Jiu Jitsu and student organizations such as L.A.S.O and the Data Driven Student Alliance. I'm also fluent in English and Spanish, and I'm certified in CPR and First Aid.</p>
         </div>
     </div>
 </body>
