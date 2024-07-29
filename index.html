@@ -52,7 +52,10 @@
             margin: 0.5em 0 1.5em;
             color: #ffffff; /* White text */
         }
-        .links a, .resume-links a {
+        .links {
+            margin-bottom: 2em;
+        }
+        .links a {
             display: inline-block;
             margin: 0.5em;
             text-decoration: none;
@@ -64,7 +67,7 @@
             background-color: #ffffff; /* White background */
             transition: background-color 0.3s, color 0.3s;
         }
-        .links a:hover, .resume-links a:hover {
+        .links a:hover {
             background-color: #141619;
             color: #ffffff; /* White text on hover */
         }
@@ -85,32 +88,32 @@
             height: 100%;
             object-fit: cover;
         }
-        .about {
+        .about, .resume-section {
             width: 100%;
             margin-top: 2em;
             padding: 2em;
-            background-color: rgba(44, 46, 58, 0.8); /* Semi-transparent background using #2C2E3A */
+            background-color: #ffffff; /* White background */
+            color: #141619; /* Dark grey text */
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .about h2, .resume-section h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #141619; /* Dark grey text */
+        }
+        .about p, .resume-section ul li {
+            color: #141619; /* Dark grey text */
         }
         .about h2 {
-            font-family: 'Oswald', sans-serif;
             font-size: 2.5em;
             margin-bottom: 1em;
-            color: #B3B4BD; /* Light grey text */
         }
         .about p {
             font-size: 1.2em;
-            color: #B3B4BD; /* Light grey text */
-        }
-        .resume-section {
-            width: 100%;
-            margin-top: 2em;
         }
         .resume-section h3 {
-            font-family: 'Oswald', sans-serif;
             font-size: 2em;
             margin-bottom: 0.5em;
-            color: #B3B4BD; /* Light grey text */
         }
         .resume-section ul {
             list-style-type: none;
@@ -119,22 +122,36 @@
         .resume-section ul li {
             font-size: 1.2em;
             margin-bottom: 0.5em;
-            color: #B3B4BD; /* Light grey text */
         }
         .resume-links {
             margin-top: 2em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="links">
+            <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://letterboxd.com/bsalazar_/" target="_blank" class="letterboxd">
+                <i class="fab fa-letterboxd"></i> Letterboxd
+            </a>
+            <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
         <div class="hero">
             <div class="hero-text">
                 <h1>Brandon Salazar's<br>Portfolio Website</h1>
                 <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
             </div>
             <div class="image-section">
-                <img src="path_to_your_image.jpg" alt="Brandon Salazar">
+                <img src="C:\Users\Brandon\Pictures\brandon finsihed photos\DSC01393.jpg" alt="Brandon Salazar">
             </div>
         </div>
         <div class="about">
@@ -142,6 +159,12 @@
             <p>I'm Brandon Salazar, a business administration graduate with a concentration in Information Systems from Montclair State University. I have a passion for technology and data analytics, and I'm skilled in various tools and languages including Microsoft Office Suite, Salesforce.com, PowerBi, SQL, Tableau, and more.</p>
             <p>In addition to my technical skills, I have a strong background in system administration and data analysis, having worked at Sensorium AVR, Green Key Resources, Montclair State University, and Best Buy's Geek Squad.</p>
             <p>Outside of work, I'm actively involved in Brazilian Jiu Jitsu and student organizations such as L.A.S.O and the Data Driven Student Alliance. I'm also fluent in English and Spanish, and I'm certified in CPR and First Aid.</p>
+        </div>
+        <div class="resume-links">
+            <a href="#sensorium-avr">Sensorium AVR</a>
+            <a href="#green-key-resources">Green Key Resources</a>
+            <a href="#montclair-state">Montclair State University</a>
+            <a href="#best-buy">Best Buy</a>
         </div>
         <div class="resume-section" id="sensorium-avr">
             <h3>Sensorium AVR</h3>
@@ -178,23 +201,6 @@
                 <li>Repaired and serviced computers and electronics</li>
                 <li>Advised customers on technology solutions</li>
             </ul>
-        </div>
-        <div class="resume-links">
-            <a href="#sensorium-avr">Sensorium AVR</a>
-            <a href="#green-key-resources">Green Key Resources</a>
-            <a href="#montclair-state">Montclair State University</a>
-            <a href="#best-buy">Best Buy</a>
-        </div>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://letterboxd.com/bsalazar_/" target="_blank" class="letterboxd">
-                <i class="fab fa-letterboxd"></i> Letterboxd
-            </a>
         </div>
     </div>
 </body>
