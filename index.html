@@ -14,7 +14,7 @@
         body {
             font-family: 'Noto Sans SC', sans-serif;
             margin: 0;
-            background: linear-gradient(to bottom left, #141619, #0A21C0); /* Gradient from dark grey to royal blue */
+            background: linear-gradient(to top right, #141619, #0A21C0); /* Gradient from dark grey to royal blue */
             color: #B3B4BD; /* Light grey text */
             min-height: 200vh; /* Double the height of the viewport */
             display: flex;
@@ -52,7 +52,7 @@
             margin: 0.5em 0 1.5em;
             color: #ffffff; /* White text */
         }
-        .links a {
+        .links a, .resume-links a {
             display: inline-block;
             margin: 0.5em;
             text-decoration: none;
@@ -63,7 +63,7 @@
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
-        .links a:hover {
+        .links a:hover, .resume-links a:hover {
             background-color: #B3B4BD;
             color: #141619; /* Dark grey text on hover */
         }
@@ -101,6 +101,25 @@
             font-size: 1.2em;
             color: #B3B4BD; /* Light grey text */
         }
+        .resume-section {
+            width: 100%;
+            margin-top: 2em;
+        }
+        .resume-section h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #B3B4BD; /* Light grey text */
+        }
+        .resume-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .resume-section ul li {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            color: #B3B4BD; /* Light grey text */
+        }
     </style>
 </head>
 <body>
@@ -125,12 +144,23 @@
                 <img src="path_to_your_image.jpg" alt="Brandon Salazar">
             </div>
         </div>
-        <div class="about">
-            <h2>About Me</h2>
-            <p>I'm Brandon Salazar, a business administration graduate with a concentration in Information Systems from Montclair State University. I have a passion for technology and data analytics, and I'm skilled in various tools and languages including Microsoft Office Suite, Salesforce.com, PowerBi, SQL, Tableau, and more.</p>
-            <p>In addition to my technical skills, I have a strong background in system administration and data analysis, having worked at Sensorium AVR, Green Key Resources, Montclair State University, and Best Buy's Geek Squad.</p>
-            <p>Outside of work, I'm actively involved in Brazilian Jiu Jitsu and student organizations such as L.A.S.O and the Data Driven Student Alliance. I'm also fluent in English and Spanish, and I'm certified in CPR and First Aid.</p>
+        <div class="resume-links">
+            <a href="#sensorium-avr">Sensorium AVR</a>
+            <a href="#green-key-resources">Green Key Resources</a>
+            <a href="#montclair-state">Montclair State University</a>
+            <a href="#best-buy">Best Buy</a>
         </div>
-    </div>
-</body>
-</html>
+        <div class="resume-section" id="sensorium-avr">
+            <h3>Sensorium AVR</h3>
+            <ul>
+                <li>Assistant Administrator</li>
+                <li>Managed on-prem AD</li>
+                <li>Administered DNS, LAN, WAN, VPN</li>
+                <li>Disaster Recovery and Business Continuity</li>
+            </ul>
+        </div>
+        <div class="resume-section" id="green-key-resources">
+            <h3>Green Key Resources</h3>
+            <ul>
+                <li>System Administrator and Data Analyst</li>
+                <li
