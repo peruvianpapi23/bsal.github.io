@@ -18,11 +18,16 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #1f3b4d; /* Darkish blue background */
+            background-color: #4169e1; /* Royal blue background */
             color: #ffffff; /* White text */
         }
         .container {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+        .text-section {
+            margin-right: 2em;
         }
         .hero-text h1 {
             font-family: 'Oswald', sans-serif;
@@ -48,23 +53,41 @@
         }
         .links a:hover {
             background-color: #ffffff;
-            color: #1f3b4d; /* Darkish blue text on hover */
+            color: #4169e1; /* Royal blue text on hover */
+        }
+        .image-section {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ffffff;
+            background-color: #ffffff; /* White background in case image doesn't load */
+        }
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="hero-text">
-            <h1>Brandon Salazar's<br>Portfolio Website</h1>
+        <div class="text-section">
+            <div class="hero-text">
+                <h1>Brandon Salazar's<br>Portfolio Website</h1>
+            </div>
+            <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
         </div>
-        <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
-                <i class="fab fa-github"></i> GitHub
-            </a>
+        <div class="image-section">
+            <img src="path_to_your_image.jpg" alt="Brandon Salazar">
         </div>
     </div>
 </body>
