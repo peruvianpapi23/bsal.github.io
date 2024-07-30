@@ -25,7 +25,7 @@
             align-items: flex-start;
             padding: 2em;
             transition: background-color 0.3s;
-            /* Removed overflow: hidden to allow scrolling */
+            overflow: auto; /* Ensuring scrolling works */
         }
         .container {
             display: flex;
@@ -152,11 +152,29 @@
             border-radius: 10px;
             padding: 1.5em; /* Increased padding */
             margin: -1.5em; /* Negative margin to cover more area */
-            /* Added a bit more padding so the grey bubble looks trimmed */
         }
         .resume-section .smaller-bubble h4 {
             font-size: 1.5em;
             margin: 0;
+        }
+        .resume-section .view-more-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #141619;
+            font-size: 1.2em;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            margin-top: 1em;
+            transition: background-color 0.3s;
+        }
+        .resume-section .view-more-btn:hover {
+            background-color: #0a1f2e;
+        }
+        .resume-section .view-more-btn i {
+            margin-right: 0.5em;
         }
     </style>
 </head>
@@ -191,8 +209,24 @@
         <div class="about" id="about">
             <h2>About Me</h2>
             <p>I'm Brandon Salazar, a business administration graduate with a concentration in Information Systems from Montclair State University. I have a passion for technology and data analytics, and I'm skilled in various tools and languages including Microsoft Office Suite, Salesforce.com, PowerBi, SQL, Tableau, and more.</p>
-            <p>In addition to my technical skills, I have a strong background in system administration and data analysis, having worked at Sensorium AVR, Green Key Resources, Montclair State University, and Best Buy's Geek Squad.</p>
-            <p>Outside of work, I'm actively involved in Brazilian Jiu Jitsu and student organizations such as L.A.S.O and the Data Driven Student Alliance. I'm also fluent in English and Spanish, and I'm certified in CPR and First Aid.</p>
+        </div>
+        <div class="resume-section" id="headstarter-ai">
+            <div class="smaller-bubble">
+                <h4>Headstarter AI</h4>
+                <ul>
+                    <li>Software Engineer Fellow</li>
+                    <li>Successfully completed multiple coding projects, showcasing proficiency in various programming languages.</li>
+                    <li>Practical experience in AI and machine learning applications.</li>
+                    <li>Completed a 7-week intensive software engineering fellowship.</li>
+                    <li>Built 5 AI Projects using OpenAI, NextJS, Firebase, HTML, AWS and other SaaS/PaaS.</li>
+                    <li>Participated in 5 Hackathons, 3 virtually and 2 in person with peers.</li>
+                    <li>Engaged in comprehensive feedback from experienced and well-placed industry SWEs.</li>
+                    <li>Projects Included: Achieve 1,000 people on waitlist, built a solution for a startup’s backlog meeting business requirements, contributed accepted pull requests to an open-source community.</li>
+                </ul>
+            </div>
+            <a href="#resume" class="view-more-btn">
+                <i class="fas fa-laptop"></i> View More Jobs
+            </a>
         </div>
         <div class="resume-section" id="sensorium-avr">
             <div class="smaller-bubble">
