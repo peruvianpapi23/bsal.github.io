@@ -25,6 +25,16 @@
             align-items: flex-start;
             padding: 2em;
             transition: background-color 0.3s;
+            overflow: hidden;
+        }
+        .mouse-effect {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            background: radial-gradient(circle, rgba(179, 180, 189, 0.6) 10%, transparent 40%);
+            mix-blend-mode: multiply;
         }
         .container {
             display: flex;
@@ -105,7 +115,6 @@
             color: #141619; /* Dark grey text */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
         }
         .about h2, .resume-section h3 {
             font-family: 'Oswald', sans-serif;
@@ -145,7 +154,7 @@
         .intro-text p {
             font-size: 1.2em;
         }
-        .smaller-bubble {
+        .resume-section .smaller-bubble {
             background-color: #B3B4BD; /* Light grey */
             border-radius: 10px;
             padding: 1em;
@@ -153,14 +162,10 @@
             font-size: 0.9em;
             color: #141619; /* Dark grey text */
         }
-        .smaller-bubble.complete {
-            padding: 1em;
-            margin-top: 0;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
+    <div class="mouse-effect"></div>
     <div class="container">
         <div class="hero">
             <div class="hero-text">
@@ -194,18 +199,19 @@
             <p>In addition to my technical skills, I have a strong background in system administration and data analysis, having worked at Sensorium AVR, Green Key Resources, Montclair State University, and Best Buy's Geek Squad.</p>
             <p>Outside of work, I'm actively involved in Brazilian Jiu Jitsu and student organizations such as L.A.S.O and the Data Driven Student Alliance. I'm also fluent in English and Spanish, and I'm certified in CPR and First Aid.</p>
         </div>
-        <div class="smaller-bubble complete">
-            <div class="resume-section" id="sensorium-avr">
-                <h3>Sensorium AVR</h3>
+        <div class="resume-section" id="sensorium-avr">
+            <h3>Sensorium AVR</h3>
+            <div class="smaller-bubble">
                 <ul>
                     <li>Assistant Administrator</li>
-                    <li>Managed on-prem AD</li>
-                    <li>Administered DNS, LAN, WAN, VPN</li>
-                    <li>Disaster Recovery and Business Continuity</li>
+                    <li>Managed IT infrastructure</li>
+                    <li>Implemented system upgrades</li>
                 </ul>
             </div>
-            <div class="resume-section" id="green-key-resources">
-                <h3>Green Key Resources</h3>
+        </div>
+        <div class="resume-section" id="green-key-resources">
+            <h3>Green Key Resources</h3>
+            <div class="smaller-bubble">
                 <ul>
                     <li>System Administrator</li>
                     <li>Data Analyst</li>
@@ -213,16 +219,20 @@
                     <li>Data Manipulation, SQL</li>
                 </ul>
             </div>
-            <div class="resume-section" id="montclair-state">
-                <h3>Montclair State University</h3>
+        </div>
+        <div class="resume-section" id="montclair-state">
+            <h3>Montclair State University</h3>
+            <div class="smaller-bubble">
                 <ul>
                     <li>Lab Assistant Technician</li>
                     <li>Provided technical support to students</li>
                     <li>Maintained lab equipment</li>
                 </ul>
             </div>
-            <div class="resume-section" id="best-buy">
-                <h3>Best Buy</h3>
+        </div>
+        <div class="resume-section" id="best-buy">
+            <h3>Best Buy</h3>
+            <div class="smaller-bubble">
                 <ul>
                     <li>Geek Squad Member</li>
                     <li>Provided technical support to customers</li>
@@ -231,5 +241,22 @@
             </div>
         </div>
     </div>
+    <script>
+        const mouseEffect = document.querySelector('.mouse-effect');
+
+        document.addEventListener('mousemove', (e) => {
+            mouseEffect.style.left = `${e.clientX}px`;
+            mouseEffect.style.top = `${e.clientY}px`;
+        });
+
+        // Smooth scrolling function
+        window.onload = function() {
+            const body = document.body;
+            const height = body.scrollHeight - window.innerHeight;
+            window.onscroll = function() {
+                body.style.backgroundPositionY = `${(window.scrollY / height) * 100}%`;
+            };
+        };
+    </script>
 </body>
 </html>
