@@ -17,14 +17,15 @@
         body {
             font-family: 'Noto Sans SC', sans-serif;
             margin: 0;
-            background-color: #e0e0e0; /* Matte grey background */
-            color: #141619; /* Dark grey text */
+            background: linear-gradient(to bottom, #000080 0%, #000080 50%, #000000 100%); /* Navy blue to black transition */
+            color: #ffffff; /* White text */
             min-height: 200vh; /* Double the height of the viewport */
             display: flex;
             justify-content: center;
             align-items: flex-start;
             padding: 2em;
             overflow: auto; /* Ensuring scrolling works */
+            transition: background-color 0.5s;
         }
         .container {
             display: flex;
@@ -49,12 +50,12 @@
             font-family: 'Oswald', sans-serif;
             font-size: 3em;
             margin: 0.5em 0;
-            color: #141619; /* Dark grey text */
+            color: #ffffff; /* White text */
         }
         .hero-text p {
             font-size: 1.2em;
             margin: 0.5em 0 1.5em;
-            color: #141619; /* Dark grey text */
+            color: #ffffff; /* White text */
         }
         .links, .resume-links {
             display: flex;
@@ -65,28 +66,28 @@
         }
         .links a, .resume-links a {
             text-decoration: none;
-            color: #141619; /* Dark grey text */
+            color: #ffffff; /* White text */
             font-size: 1.2em;
             padding: 0.5em 1em;
-            border: 2px solid #141619;
+            border: 2px solid #ffffff;
             border-radius: 5px;
-            background-color: #ffffff; /* White background */
+            background-color: #000080; /* Navy blue background */
             transition: background-color 0.3s, color 0.3s;
             display: flex;
             align-items: center;
             gap: 0.5em;
         }
         .links a:hover, .resume-links a:hover {
-            background-color: #141619;
-            color: #ffffff; /* White text on hover */
+            background-color: #ffffff;
+            color: #000080; /* Navy blue text on hover */
         }
         .image-section {
             width: 150px;
             height: 200px;
             border-radius: 50% / 60%;
             overflow: hidden;
-            border: 5px solid #141619; /* Dark grey border */
-            background-color: #ffffff; /* White background in case image doesn't load */
+            border: 5px solid #ffffff; /* White border */
+            background-color: #000080; /* Navy blue background in case image doesn't load */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -102,17 +103,17 @@
             margin-top: 2em;
             padding: 2em;
             background-color: #ffffff; /* White background */
-            color: #141619; /* Dark grey text */
+            color: #000000; /* Black text */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: relative; /* To position the grey bubble inside */
         }
         .about h2, .resume-section h3 {
             font-family: 'Oswald', sans-serif;
-            color: #141619; /* Dark grey text */
+            color: #000000; /* Black text */
         }
         .about p, .resume-section ul li {
-            color: #141619; /* Dark grey text */
+            color: #000000; /* Black text */
         }
         .about h2 {
             font-size: 2.5em;
@@ -135,7 +136,7 @@
         }
         .intro-text {
             margin-top: 2em;
-            color: #141619; /* Dark grey text */
+            color: #ffffff; /* White text */
         }
         .intro-text h1 {
             font-family: 'Oswald', sans-serif;
@@ -165,7 +166,7 @@
             justify-content: center;
             text-decoration: none;
             color: #ffffff;
-            background-color: #141619;
+            background-color: #000080; /* Navy blue background */
             font-size: 1.2em;
             padding: 0.5em 1em;
             border-radius: 5px;
