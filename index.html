@@ -25,7 +25,7 @@
             align-items: flex-start;
             padding: 2em;
             transition: background-color 0.3s;
-            overflow: hidden;
+            /* Removed overflow: hidden to allow scrolling */
         }
         .container {
             display: flex;
@@ -148,10 +148,12 @@
         .resume-section .smaller-bubble {
             background-color: #B3B4BD; /* Light grey */
             border-radius: 10px;
-            padding: 1em;
+            padding: 1.5em; /* Increased padding for larger bubble */
             margin-top: 1em;
-            font-size: 0.9em;
+            font-size: 1em; /* Increased font size */
             color: #141619; /* Dark grey text */
+            width: calc(100% + 2em); /* Increase width to reduce margin */
+            margin-left: -1em; /* Adjust margin to fit within the container */
         }
         .resume-section .smaller-bubble h4 {
             font-size: 1.5em;
