@@ -147,16 +147,12 @@
             font-size: 1.2em;
         }
         .resume-section .smaller-bubble {
-            position: absolute;
-            top: -1em; /* Adjust to fit within the white bubble */
-            left: -1em; /* Adjust to fit within the white bubble */
-            width: calc(100% + 2em); /* Increase width to cover more area */
-            height: calc(100% + 2em); /* Increase height to cover more area */
+            position: relative;
             background-color: #B3B4BD; /* Light grey */
             border-radius: 10px;
-            padding: 1.5em; /* Increased padding for larger bubble */
-            box-sizing: border-box; /* Include padding in the element's total width and height */
-            z-index: -1; /* Place behind the white bubble */
+            padding: 1.5em; /* Increased padding */
+            margin: -1.5em; /* Negative margin to cover more area */
+            /* Added a bit more padding so the grey bubble looks trimmed */
         }
         .resume-section .smaller-bubble h4 {
             font-size: 1.5em;
