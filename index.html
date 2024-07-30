@@ -27,15 +27,6 @@
             transition: background-color 0.3s;
             overflow: hidden;
         }
-        .mouse-effect {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 9999;
-            background: radial-gradient(circle, rgba(179, 180, 189, 0.6) 10%, transparent 40%);
-            mix-blend-mode: multiply;
-        }
         .container {
             display: flex;
             flex-direction: column;
@@ -162,10 +153,13 @@
             font-size: 0.9em;
             color: #141619; /* Dark grey text */
         }
+        .resume-section .smaller-bubble h4 {
+            font-size: 1.5em;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="mouse-effect"></div>
     <div class="container">
         <div class="hero">
             <div class="hero-text">
@@ -200,8 +194,8 @@
             <p>Outside of work, I'm actively involved in Brazilian Jiu Jitsu and student organizations such as L.A.S.O and the Data Driven Student Alliance. I'm also fluent in English and Spanish, and I'm certified in CPR and First Aid.</p>
         </div>
         <div class="resume-section" id="sensorium-avr">
-            <h3>Sensorium AVR</h3>
             <div class="smaller-bubble">
+                <h4>Sensorium AVR</h4>
                 <ul>
                     <li>Assistant Administrator</li>
                     <li>Managed IT infrastructure</li>
@@ -210,53 +204,35 @@
             </div>
         </div>
         <div class="resume-section" id="green-key-resources">
-            <h3>Green Key Resources</h3>
             <div class="smaller-bubble">
+                <h4>Green Key Resources</h4>
                 <ul>
-                    <li>System Administrator</li>
                     <li>Data Analyst</li>
-                    <li>Service Now, Nitro Studio</li>
-                    <li>Data Manipulation, SQL</li>
+                    <li>Conducted data analysis for client reports</li>
+                    <li>Developed dashboards and visualizations</li>
                 </ul>
             </div>
         </div>
         <div class="resume-section" id="montclair-state">
-            <h3>Montclair State University</h3>
             <div class="smaller-bubble">
+                <h4>Montclair State University</h4>
                 <ul>
-                    <li>Lab Assistant Technician</li>
-                    <li>Provided technical support to students</li>
-                    <li>Maintained lab equipment</li>
+                    <li>Student Intern</li>
+                    <li>Assisted with system maintenance</li>
+                    <li>Provided technical support to students and staff</li>
                 </ul>
             </div>
         </div>
         <div class="resume-section" id="best-buy">
-            <h3>Best Buy</h3>
             <div class="smaller-bubble">
+                <h4>Best Buy</h4>
                 <ul>
-                    <li>Geek Squad Member</li>
-                    <li>Provided technical support to customers</li>
-                    <li>Repaired and maintained electronic devices</li>
+                    <li>Geek Squad Agent</li>
+                    <li>Troubleshot and repaired electronics</li>
+                    <li>Provided excellent customer service</li>
                 </ul>
             </div>
         </div>
     </div>
-    <script>
-        const mouseEffect = document.querySelector('.mouse-effect');
-
-        document.addEventListener('mousemove', (e) => {
-            mouseEffect.style.left = `${e.clientX}px`;
-            mouseEffect.style.top = `${e.clientY}px`;
-        });
-
-        // Smooth scrolling function
-        window.onload = function() {
-            const body = document.body;
-            const height = body.scrollHeight - window.innerHeight;
-            window.onscroll = function() {
-                body.style.backgroundPositionY = `${(window.scrollY / height) * 100}%`;
-            };
-        };
-    </script>
 </body>
 </html>
