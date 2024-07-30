@@ -106,6 +106,7 @@
             color: #141619; /* Dark grey text */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* To position the grey bubble inside */
         }
         .about h2, .resume-section h3 {
             font-family: 'Oswald', sans-serif;
@@ -146,14 +147,16 @@
             font-size: 1.2em;
         }
         .resume-section .smaller-bubble {
+            position: absolute;
+            top: -1em; /* Adjust to fit within the white bubble */
+            left: -1em; /* Adjust to fit within the white bubble */
+            width: calc(100% + 2em); /* Increase width to cover more area */
+            height: calc(100% + 2em); /* Increase height to cover more area */
             background-color: #B3B4BD; /* Light grey */
             border-radius: 10px;
             padding: 1.5em; /* Increased padding for larger bubble */
-            margin-top: 1em;
-            font-size: 1em; /* Increased font size */
-            color: #141619; /* Dark grey text */
-            width: calc(100% + 2em); /* Increase width to reduce margin */
-            margin-left: -1em; /* Adjust margin to fit within the container */
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+            z-index: -1; /* Place behind the white bubble */
         }
         .resume-section .smaller-bubble h4 {
             font-size: 1.5em;
