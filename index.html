@@ -1,198 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Loop</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Brandon Salazar's Portfolio Website">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brandon Salazar's Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
+        html {
             scroll-behavior: smooth;
         }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: linear-gradient(90deg, blue, black, orange);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: orange;
-        }
-
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        #home {
-            background: linear-gradient(90deg, blue, black, orange);
-            color: white;
-            transition: background 0.5s ease;
-        }
-
-        #shop {
-            background: white;
-            transition: background 0.5s ease;
-        }
-
-        #about {
-            background: linear-gradient(90deg, black, blue, orange);
-            color: white;
-            transition: background 0.5s ease;
-        }
-
-        #contact {
-            background: white;
-            transition: background 0.5s ease;
-        }
-
-        .products {
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #000080 0%, #000080 50%, #000000 100%); /* Navy blue to black transition */
+            color: #ffffff; /* White text */
+            min-height: 200vh; /* Double the height of the viewport */
             display: flex;
             justify-content: center;
-            gap: 20px;
+            align-items: flex-start;
+            padding: 2em;
+            overflow: auto; /* Ensuring scrolling works */
+            transition: background-color 0.5s;
         }
-
-        .product {
-            border: 1px solid #ccc;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .product img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-
-        .product h3 {
-            margin: 10px 0;
-        }
-
-        .product:hover {
-            transform: scale(1.05);
-        }
-
-        form {
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        form input, form textarea {
-            width: 80%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            padding: 10px 20px;
-            border: none;
-            background: blue;
-            color: white;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        form button:hover {
-            background: orange;
-        }
-
-        footer {
             text-align: center;
-            padding: 20px;
-            background: black;
-            color: white;
+            width: 100%;
+            max-width: 800px;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            margin-bottom: 2em;
+            width: 100%;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3em;
+            margin: 0.5em 0;
+            color: #ffffff; /* White text */
+        }
+        .hero-text p {
+            font-size: 1.2em;
+            margin: 0.5em 0 1.5em;
+            color: #ffffff; /* White text */
+        }
+        .links, .resume-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin: 1em 0;
+        }
+        .links a, .resume-links a {
+            text-decoration: none;
+            color: #ffffff; /* White text */
+            font-size: 1.2em;
+            padding: 0.5em 1em;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            background-color: #000080; /* Navy blue background */
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        .links a:hover, .resume-links a:hover {
+            background-color: #ffffff;
+            color: #000080; /* Navy blue text on hover */
+        }
+        .image-section {
+            width: 150px;
+            height: 200px;
+            border-radius: 50% / 60%;
+            overflow: hidden;
+            border: 5px solid #ffffff; /* White border */
+            background-color: #000080; /* Navy blue background in case image doesn't load */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 2em;
+        }
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .about, .resume-section {
+            width: 100%;
+            margin-top: 2em;
+            padding: 2em;
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* To position the grey bubble inside */
+        }
+        .about h2, .resume-section h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #000000; /* Black text */
+        }
+        .about p, .resume-section ul li {
+            color: #000000; /* Black text */
+        }
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+        .about p {
+            font-size: 1.2em;
+        }
+        .resume-section h3 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        .resume-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .resume-section ul li {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        .intro-text {
+            margin-top: 2em;
+            color: #ffffff; /* White text */
+        }
+        .intro-text h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .intro-text p {
+            font-size: 1.2em;
+        }
+        .resume-section .smaller-bubble {
+            position: relative;
+            background-color: #B3B4BD; /* Light grey */
+            border-radius: 10px;
+            padding: 1em; /* Adjusted padding to make bubble smaller */
+            margin: -1em; /* Adjusted margin to keep bubble within bounds */
+        }
+        .resume-section .smaller-bubble h4 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .resume-links a {
+            margin: 0 0.5em;
+        }
+        .resume-section .view-more-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #000080; /* Navy blue background */
+            font-size: 1.2em;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            margin-top: 1em;
+            transition: background-color 0.3s;
+        }
+        .resume-section .view-more-btn:hover {
+            background-color: #0a1f2e;
+        }
+        .resume-section .view-more-btn i {
+            margin-right: 0.5em;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.resume-links a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <div class="logo">The Loop</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="section">
-        <h1>Welcome to The Loop</h1>
-        <p>Your one-stop shop for fashion reselling.</p>
-    </section>
-
-    <section id="shop" class="section">
-        <h2>Shop</h2>
-        <div class="products">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>$25.00</p>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Brandon Salazar's<br>Portfolio Website</h1>
+                <p>Welcome to my portfolio site. Explore my projects and connect with me!</p>
             </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>$35.00</p>
-            </div>
-            <div class="product">
-                <img src="product3.jpg" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>$45.00</p>
+            <div class="image-section">
+                <img src="C:\Users\Brandon\Pictures\brandon finsihed photos\DSC01393.jpg" alt="Brandon Salazar">
             </div>
         </div>
-    </section>
-
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>At The Loop, we specialize in curating the best fashion pieces for resale.</p>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 The Loop. All rights reserved.</p>
-    </footer>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/brandonasalazar/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://letterboxd.com/bsalazar_/" target="_blank" class="letterboxd">
+                <i class="fas fa-camera"></i> Letterboxd
+            </a>
+            <a href="https://github.com/peruvianpapi23" target="_blank" class="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+        <div class="resume-links">
+            <a href="#sensorium-avr"><i class="fas fa-home"></i> Sensorium AVR</a>
+            <a href="#headstarter-ai"><i class="fas fa-robot"></i> Headstarter AI</a>
+            <a href="#green-key-resources"><i class="fas fa-key"></i> Green Key Resources</a>
+            <a href="#montclair-state"><i class="fas fa-school"></i> Montclair State</a>
+            <a href="#best-buy"><i class="fas fa-store"></i> Best Buy</a>
+        </div>
+        <div class="about">
+            <div class="smaller-bubble">
+                <h2>About Me</h2>
+                <p>I am a dedicated professional in Information Technology with a passion for software engineering and data analysis. My journey has led me through various roles where I've developed skills in software development, system administration, and technical support. Beyond my professional life, I have a genuine passion for cinema, Brazilian Jiu-Jitsu, working out, and reading. I am deeply interested in learning about technology and how it intersects with our daily lives, always eager to explore new advancements and innovations.</p>
+            </div>
+        </div>
+        <div class="resume-section" id="headstarter-ai">
+            <div class="smaller-bubble">
+                <h4>Headstarter AI</h4>
+                <ul>
+                    <li>Software Engineer Fellow</li>
+                    <li>Successfully completed multiple coding projects, showcasing proficiency in various programming languages.</li>
+                    <li>Practical experience in AI and machine learning applications.</li>
+                    <li>Completed a 7-week intensive software engineering fellowship.</li>
+                    <li>Built 5 AI Projects using OpenAI, NextJS, Firebase, HTML, AWS and other SaaS/PaaS.</li>
+                    <li>Participated in 5 Hackathons, 3 virtually and 2 in person with peers.</li>
+                    <li>Engaged in comprehensive feedback from experienced and well-placed industry SWEs.</li>
+                    <li>Projects Included: Achieve 1,000 people on waitlist, built a solution for a startup’s backlog meeting business requirements, contributed accepted pull requests to an open-source community.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="resume-section" id="sensorium-avr">
+            <div class="smaller-bubble">
+                <h4>Sensorium AVR</h4>
+                <ul>
+                    <li>Assistant Administrator</li>
+                    <li>Managed IT infrastructure</li>
+                    <li>Implemented system upgrades</li>
+                </ul>
+            </div>
+        </div>
+        <div class="resume-section" id="green-key-resources">
+            <div class="smaller-bubble">
+                <h4>Green Key Resources</h4>
+                <ul>
+                    <li>Data Analyst</li>
+                    <li>Conducted data analysis for client reports</li>
+                    <li>Developed dashboards and visualizations</li>
+                </ul>
+            </div>
+        </div>
+        <div class="resume-section" id="montclair-state">
+            <div class="smaller-bubble">
+                <h4>Montclair State University</h4>
+                <ul>
+                    <li>Student Intern</li>
+                    <li>Assisted with system maintenance</li>
+                    <li>Provided technical support to students and staff</li>
+                </ul>
+            </div>
+        </div>
+        <div class="resume-section" id="best-buy">
+            <div class="smaller-bubble">
+                <h4>Best Buy</h4>
+                <ul>
+                    <li>Geek Squad Agent</li>
+                    <li>Troubleshot and repaired electronics</li>
+                    <li>Provided excellent customer service</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
